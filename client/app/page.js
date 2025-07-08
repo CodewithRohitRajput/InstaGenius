@@ -136,7 +136,7 @@ export default function CaptionGenerator() {
                 
                 <div className="mb-6">
                   <label htmlFor="prompt" className="block text-sm font-medium text-gray-700 mb-2">
-                    What's in your photo? 
+                    What is in your photo? 
                     <span className="text-xs text-gray-500 ml-1">(Be descriptive for better results)</span>
                   </label>
                   <textarea
