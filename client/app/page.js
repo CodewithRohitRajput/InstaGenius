@@ -30,7 +30,7 @@ export default function CaptionGenerator() {
     setCaptions([]);
 
     try {
-      const res = await fetch('http://localhost:3000/ask', {
+      const res = await fetch('https://instagenius.onrender.com/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
