@@ -6,7 +6,10 @@ const bot = require('./gemini/bot')
 
 app.use(cors())
 app.use(express.json())
-app.use(cors({origin : 'https://instagenius-seven.vercel.app/'}))
+app.use(cors({origin : 'https://instagenius-seven.vercel.app', 
+methods : ['POST' , 'GET'],
+credentials : 'true'
+}))
 app.use('/' , bot)
 
 app.listen(port , ()=>{
