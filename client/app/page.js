@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { FiCopy, FiInstagram, FiRefreshCw, FiBookmark, FiTwitter, FiLinkedin, FiGithub, FiHash } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function CaptionGenerator() {
   const [prompt, setPrompt] = useState('');
@@ -83,7 +84,7 @@ export default function CaptionGenerator() {
     { id: 'trendy', label: 'Trendy', emoji: '🔥' },
     { id: 'funny', label: 'Funny', emoji: '😂' },
     { id: 'inspirational', label: 'Inspo', emoji: '✨' },
-    { id: 'professional', label: 'Professional', emoji: '💼' },
+    { id: 'professional', label: 'Pro', emoji: '💼' },
     { id: 'casual', label: 'Casual', emoji: '😊' },
     { id: 'sassy', label: 'Sassy', emoji: '💁‍♀️' }
   ];
@@ -103,7 +104,7 @@ export default function CaptionGenerator() {
       <div className="flex flex-col min-h-screen bg-gradient-to-br from-pink-50 to-indigo-50">
         
      <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mt-7 leading-tight">
-  Welcome to <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent font-bold">
+  Welcome to <span className="bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold">
   InstaGenius
 </span>
 
@@ -125,11 +126,22 @@ export default function CaptionGenerator() {
             >
               <div className="p-8">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-full mr-4">
+                  {/* <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-full mr-4">
                     <FiInstagram className="text-white text-2xl" />
-                  </div>
+                  </div> */}
                   <div>
-                    <h1 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text ">InstaGenius</h1>
+                    <Image src='/icon_1.png' 
+                    width={80}
+                    height={80}
+                    alt='logo'
+                    className='rounded-lg'
+
+                    />
+                  </div>
+                  <div className='md:ml-10 ml-5' >
+                    <h1 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text "><span className="bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold">
+  InstaGenius
+</span></h1>
                     <p className="text-sm text-gray-500">AI-Powered Instagram Caption Generator</p>
                   </div>
                 </div>
@@ -161,7 +173,7 @@ export default function CaptionGenerator() {
                           onClick={() => setTone(t.id)}
                           className={`py-2 px-3 rounded-lg text-sm font-medium transition-all flex items-center justify-center ${
                             tone === t.id 
-                              ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-md'
+                              ? 'bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 text-white shadow-md'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                           }`}
                         >
@@ -183,7 +195,7 @@ export default function CaptionGenerator() {
                         max="15"
                         value={hashtagCount}
                         onChange={(e) => setHashtagCount(parseInt(e.target.value))}
-                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                        className="w-full h-2  bg-gray-200 rounded-lg appearance-none cursor-pointer"
                       />
                       <span className="ml-3 w-8 text-center text-black font-medium">{hashtagCount}</span>
                       <FiHash className="ml-1 text-gray-500" />
@@ -197,7 +209,7 @@ export default function CaptionGenerator() {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-white transition-all flex items-center justify-center ${
                     loading 
                       ? 'bg-pink-400' 
-                      : 'bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
+                      : 'bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
                   }`}
                 >
                   {loading ? (
