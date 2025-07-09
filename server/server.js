@@ -21,6 +21,7 @@ app.listen(port , ()=>{
 
 cron.schedule('*/5 * * * *' , async ()=>{
     const res = await fetch('https://instagenius.onrender.com')
+    console.log("ping done")
 })
 
 
