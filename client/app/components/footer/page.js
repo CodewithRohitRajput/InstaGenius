@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { FiCopy, FiInstagram, FiRefreshCw, FiBookmark, FiTwitter, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Footer() {
   // ... (keep all your existing state and functions)
@@ -18,19 +19,20 @@ export default function Footer() {
         </div>
 
         {/* Professional Footer */}
-        <footer className="mt-12 py-6 border-t border-gray-200">
+        <footer className="mt-96 py-6 border-t border-gray-200 ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-2">
-                <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-2 rounded-full">
-                  <FiInstagram className="text-white text-lg" />
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-                  InstaGenius
-                </span>
+                <Image 
+                  src="/ig_bg.png"
+                  width={200}
+                  height={200}
+                  alt='Logo'
+                />
+                
               </div>
               
-              <div className="mt-4 md:mt-0 text-center md:text-right">
+              <div className="mt-4 md:mt-0 text-center md:-ml-20 md:text-right">
                 <p className="text-sm text-gray-600">
                   The ultimate AI-powered Instagram caption generator
                 </p>
