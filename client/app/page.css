@@ -1,9 +1,9 @@
-/* From Uiverse.io by StealthWorm */ 
+/* From Uiverse.io by StealthWorm */
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20rem;
+  width: 18rem;
   overflow: hidden;
   height: 3.5rem;
   background-size: 300% 300%;
@@ -13,7 +13,6 @@
   transition: 0.5s;
   animation: gradient_301 5s ease infinite;
   border: double 4px transparent;
-  
   background-image: linear-gradient(#212121, #212121),
     linear-gradient(
       137.48deg,
@@ -24,7 +23,6 @@
     );
   background-origin: border-box;
   background-clip: content-box, border-box;
-  
 }
 
 #container-stars {
@@ -178,8 +176,7 @@ strong {
   }
 }
 
-
-/* From Uiverse.io by AnnaVAnTiM */ 
+/* From Uiverse.io by AnnaVAnTiM */
 .pencil {
   display: block;
   width: 10em;
@@ -251,7 +248,6 @@ strong {
 
   50% {
     stroke-dashoffset: 150.8;
-    /* 3/8 of diameter */
     transform: rotate(-225deg);
   }
 }
@@ -366,16 +362,12 @@ strong {
   }
 }
 
-/* From Uiverse.io by Galahhad */ 
+/* From Uiverse.io by Galahhad */
 .theme-switch {
   --toggle-size: 30px;
-  /* the size is adjusted using font-size,
-     this is not transform scale,
-     so you can choose any size */
   --container-width: 5.625em;
   --container-height: 2.5em;
   --container-radius: 6.25em;
-  /* radius 0 - minecraft mode :) */
   --container-light-bg: #3D7EAE;
   --container-night-bg: #1D1F2C;
   --circle-container-diameter: 3.375em;
@@ -536,7 +528,6 @@ strong {
 }
 
 /* actions */
-
 .theme-switch__checkbox:checked + .theme-switch__container {
   background-color: var(--container-night-bg);
 }
@@ -568,4 +559,106 @@ strong {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/* Base Light Mode (default) */
+html {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+html.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Background Overrides */
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.dark .bg-white,
+.dark .bg-gray-100,
+.dark .bg-gray-200,
+.dark .bg-gray-700,
+.dark .bg-gray-800,
+.dark .bg-gray-900 {
+  background-color: #000000 !important;
+}
+
+/* Text Color Overrides */
+.text-black {
+  color: #000000 !important;
+}
+
+.dark .text-black,
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500,
+.dark .text-gray-400,
+.dark .text-gray-300 {
+  color: #ffffff !important;
+}
+
+/* Border Colors */
+.border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-600,
+.dark .border-gray-700 {
+  border-color: #4b5563 !important;
+}
+
+/* Red Text */
+.text-red-500 {
+  color: #ef4444 !important;
+}
+
+.dark .text-red-500 {
+  color: #f87171 !important;
+}
+
+/* Orange Accent */
+.text-orange-500 {
+  color: #f97316 !important;
+}
+
+.dark .text-orange-400 {
+  color: #fb923c !important;
+}
+
+.bg-orange-500 {
+  background-color: #f97316 !important;
+}
+
+.dark .bg-orange-400 {
+  background-color: #fb923c !important;
+}
+
+.hover\:text-orange-600:hover {
+  color: #ea580c !important;
+}
+
+.dark .hover\:text-orange-300:hover {
+  color: #fdba74 !important;
+}
+
+/* Hover Backgrounds */
+.hover\:bg-gray-200:hover {
+  background-color: #e5e7eb !important;
+}
+
+.dark .hover\:bg-gray-800:hover {
+  background-color: #1f2937 !important;
+}
+
+/* Slider Thumb */
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  background-color: #f97316 !important;
 }
