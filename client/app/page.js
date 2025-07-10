@@ -115,14 +115,15 @@ export default function CaptionGenerator() {
 
   return (
     <>
-      <Head>
-        <title>InstaGenius | AI-Powered Instagram Caption Generator</title>
-        <meta name="description" content="Generate perfect Instagram captions with AI. Get creative, funny, or professional captions with hashtags for any photo in seconds." />
-        <meta name="keywords" content="Instagram captions, AI caption generator, social media content, hashtag generator, Instagram post ideas" />
-        <meta property="og:title" content="InstaGenius - AI-Powered Instagram Caption Generator" />
-        <meta property="og:description" content="Generate viral-worthy Instagram captions with hashtags in seconds using AI" />
+       <Head>
+        <title>InstaGenius - AI Instagram Caption Generator</title>
+        <meta name="description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
+        <meta property="og:title" content="InstaGenius - AI Caption Generator" />
+        <meta property="og:description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
+        <meta property="og:image" content="https://www.instagenius.xyz/icon_1.png" />
+        <meta property="og:url" content="https://www.instagenius.xyz" />
         <meta property="og:type" content="website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <div className="flex flex-col min-h-screen bg-white dark:bg-black  ">
