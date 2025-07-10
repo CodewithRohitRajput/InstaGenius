@@ -241,7 +241,7 @@ export default function CaptionGenerator() {
                         max="15"
                         value={hashtagCount}
                         onChange={(e) => setHashtagCount(parseInt(e.target.value))}
-                        className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                        className="w-full h-2 bg-orange-200 dark:bg-orange-600 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
                       <span className="ml-3 w-8 text-center text-black dark:text-white font-medium">{hashtagCount}</span>
                       <FiHash className="ml-1 text-orange-500 dark:text-orange-400" />
