@@ -5,6 +5,7 @@ import { FiCopy, FiInstagram, FiRefreshCw, FiBookmark, FiTwitter, FiLinkedin, Fi
 import { motion, AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
+import './page.css'
 
 export default function CaptionGenerator() {
   const [prompt, setPrompt] = useState('');
@@ -124,7 +125,7 @@ export default function CaptionGenerator() {
               transition={{ duration: 0.5 }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden"
             >
-              <div className="p-8">
+              <div className="p-8  ">
                 <div className="flex items-center justify-center mb-6">
                   {/* <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-full mr-4">
                     <FiInstagram className="text-white text-2xl" />
@@ -203,10 +204,10 @@ export default function CaptionGenerator() {
                   </div>
                 </div>
 
-                <button
+                {/* <button
                   onClick={generateCaptions}
                   disabled={loading}
-                  className={`w-full py-3 px-4 rounded-lg font-medium text-white transition-all flex items-center justify-center ${
+                  className={`w-full btn py-3 px-4 rounded-lg font-medium text-white transition-all flex items-center justify-center ${
                     loading 
                       ? 'bg-pink-400' 
                       : 'bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
@@ -223,7 +224,104 @@ export default function CaptionGenerator() {
                   ) : (
                     '✨ Generate Viral Captions'
                   )}
-                </button>
+                </button> */}
+
+ <div className="w-full flex flex-col justify-center items-center gap-8 mt-10">
+      
+      {/* When NOT loading → Show fancy button */}
+      {!loading && (
+        <button
+          type="button"
+          className="btn"
+          onClick={generateCaptions}
+        >
+          <strong>Generate</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+          <div id="glow">
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </div>
+        </button>
+      )}
+
+      {/* When loading → Show animated pencil SVG alone */}
+      {loading && (
+        <svg
+          className="pencil"
+          viewBox="0 0 200 200"
+          width="100px"
+          height="100px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <clipPath id="pencil-eraser">
+              <rect rx="5" ry="5" width="30" height="30" />
+            </clipPath>
+          </defs>
+          <circle
+            className="pencil__stroke"
+            r="70"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeDasharray="439.82 439.82"
+            strokeDashoffset="439.82"
+            strokeLinecap="round"
+            transform="rotate(-113,100,100)"
+          />
+          <g className="pencil__rotate" transform="translate(100,100)">
+            <g fill="none">
+              <circle
+                className="pencil__body1"
+                r="64"
+                stroke="hsl(30, 30%, 50%)"
+                strokeWidth="30"
+                strokeDasharray="402.12 402.12"
+                strokeDashoffset="402"
+                transform="rotate(-90)"
+              />
+              <circle
+                className="pencil__body2"
+                r="74"
+                stroke="hsl(30, 30%, 60%)"
+                strokeWidth="10"
+                strokeDasharray="464.96 464.96"
+                strokeDashoffset="465"
+                transform="rotate(-90)"
+              />
+              <circle
+                className="pencil__body3"
+                r="54"
+                stroke="hsl(30, 30%, 40%)"
+                strokeWidth="10"
+                strokeDasharray="339.29 339.29"
+                strokeDashoffset="339"
+                transform="rotate(-90)"
+              />
+            </g>
+            <g className="pencil__eraser" transform="rotate(-90) translate(49,0)">
+              <g className="pencil__eraser-skew">
+                <rect fill="hsl(30, 20%, 90%)" rx="5" ry="5" width="30" height="30" />
+                <rect fill="hsl(30, 20%, 85%)" width="5" height="30" clipPath="url(#pencil-eraser)" />
+                <rect fill="hsl(30, 20%, 80%)" width="30" height="20" />
+                <rect fill="hsl(30, 20%, 75%)" width="15" height="20" />
+                <rect fill="hsl(30, 20%, 85%)" width="5" height="20" />
+                <rect fill="hsla(30, 20%, 75%, 0.2)" y="6" width="30" height="2" />
+                <rect fill="hsla(30, 20%, 75%, 0.2)" y="13" width="30" height="2" />
+              </g>
+            </g>
+            <g className="pencil__point" transform="rotate(-90) translate(49,-30)">
+              <polygon fill="hsl(33,90%,70%)" points="15 0,30 30,0 30" />
+              <polygon fill="hsl(33,90%,50%)" points="15 0,6 30,0 30" />
+              <polygon fill="hsl(223,10%,10%)" points="15 0,20 10,10 10" />
+            </g>
+          </g>
+        </svg>
+      )}
+    </div>
+
 
                 {error && (
                   <motion.div 
