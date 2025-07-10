@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from './components/footer/page'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,22 +12,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "InstaGenius",
-  description: "Free AI powered Instagram caption generator",
+  title: "InstaGenius - AI Instagram Caption Generator",
+  description: "Free AI-powered Instagram caption generator that helps you create trendy and optimized captions with hashtags.",
+  metadataBase: new URL("https://www.instagenius.xyz"),
+  openGraph: {
+    title: "InstaGenius - AI Caption Generator",
+    description: "Generate professional, trendy captions using AI",
+    url: "https://www.instagenius.xyz",
+    siteName: "InstaGenius",
+    images: [
+      {
+        url: "/icon_1.png", // or full URL if needed
+        width: 800,
+        height: 600,
+        alt: "InstaGenius Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "InstaGenius",
+    description: "Free AI Instagram caption generator",
+    images: ["/icon_1.png"],
+  },
+  icons: {
+    icon: "/icon_1.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/icon_1.png" sizes="any" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        {/* < Footer/> */}
-        
       </body>
     </html>
   );
