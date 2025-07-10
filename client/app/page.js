@@ -136,7 +136,7 @@ export default function CaptionGenerator() {
           AI-powered Instagram caption generator for creative, catchy, and optimized content.
         </p>
 
-        <div className="flex justify-end mr-10 mt-4 md:-translate-y-24 -translate-x-8 md:translate-x-0 ">
+        <div className="flex justify-end mr-10 mt-4 md:-translate-y-24 -translate-x-12 md:translate-x-0 ">
           <label className="theme-switch">
             <input 
               type="checkbox" 
