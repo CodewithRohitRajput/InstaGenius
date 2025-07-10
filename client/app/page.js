@@ -348,7 +348,7 @@ export default function CaptionGenerator() {
                         <div className="flex space-x-3">
                           <button 
                             onClick={regenerateCaptions}
-                            className="text-pink-500 hover:text-pink-600 flex items-center text-sm"
+                            className="text-yellow-500 hover:text-yellow-600 flex items-center text-sm"
                           >
                             <FiRefreshCw className="mr-1" /> Regenerate
                           </button>
@@ -374,7 +374,7 @@ export default function CaptionGenerator() {
                               >
                                 <div className="whitespace-pre-line text-gray-800 mb-3">{text}</div>
                                 {tags.length > 0 && (
-                                  <div className="text-sm text-pink-500 flex flex-wrap gap-2">
+                                  <div className="text-sm text-yellow-500 flex flex-wrap gap-2">
                                     {tags.map((tag, i) => (
                                       <span key={i}>#{tag}</span>
                                     ))}
@@ -383,7 +383,7 @@ export default function CaptionGenerator() {
                                 <div className="absolute bottom-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
                                   <button
                                     onClick={() => copyToClipboard(`${text}\n\n${tags.map(t => `#${t}`).join(' ')}`, index)}
-                                    className="p-1 text-gray-400 hover:text-pink-500 transition-colors"
+                                    className="p-1 text-gray-400 hover:text-yellow-500 transition-colors"
                                     aria-label="Copy to clipboard"
                                     title="Copy"
                                   >
@@ -391,7 +391,7 @@ export default function CaptionGenerator() {
                                   </button>
                                   <button
                                     onClick={() => saveCaption(`${text}\n\n${tags.map(t => `#${t}`).join(' ')}`)}
-                                    className="p-1 text-gray-400 hover:text-pink-500 transition-colors"
+                                    className="p-1 text-gray-400 hover:text-yellow-500 transition-colors"
                                     aria-label="Save caption"
                                     title="Save"
                                   >
@@ -403,7 +403,7 @@ export default function CaptionGenerator() {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
-                                    className="absolute top-2 right-10 text-xs bg-pink-500 text-white px-2 py-1 rounded"
+                                    className="absolute top-2 right-10 text-xs bg-yellow-500 text-white px-2 py-1 rounded"
                                   >
                                     Copied!
                                   </motion.span>
