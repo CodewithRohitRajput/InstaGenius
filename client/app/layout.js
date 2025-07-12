@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from 'next/head'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,11 +45,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <head>
+    <Head>
       {/* <link rel="icon" href="https://www.instagenius.xyz/icon_1.png" /> */}
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8809333825398998"
      crossorigin="anonymous"></script>
-    </head>
+    </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
