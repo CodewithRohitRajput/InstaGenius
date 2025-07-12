@@ -500,10 +500,10 @@ export default function CaptionGenerator() {
             
             <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-600 flex flex-col md:flex-row justify-between items-center">
               <nav className="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                <a href="#" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Terms</a>
-                <a href="#" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Privacy</a>
-                <a href="#" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Cookies</a>
-                <a href="#" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Contact</a>
+                <a href="/terms" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Terms</a>
+                <a href="/privacy-policy" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Privacy</a>
+                <a href="/about" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">About us</a>
+                <a href="/contact" className="text-sm text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Contact</a>
               </nav>
               
               <div className="mt-4 md:mt-0">
