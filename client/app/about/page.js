@@ -6,7 +6,7 @@ export default function AboutPage() {
         InstaGenius is a free AI-powered Instagram caption generator helping creators craft trendy, high-quality captions in seconds.
       </p>
       <p className="mt-4 text-lg leading-relaxed">
-        Whether you're an influencer, small business, or just love sharing, our tool boosts your engagement with minimal effort.
+        Whether you are an influencer, small business, or just love sharing, our tool boosts your engagement with minimal effort.
       </p>
     </main>
   );
