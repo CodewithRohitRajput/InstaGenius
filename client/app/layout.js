@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AdsenseScript from "./adsense";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +23,7 @@ export const metadata = {
     siteName: "InstaGenius",
     images: [
       {
-        url: "/icon_1.png", // or full URL if needed
+        url: "/icon_1.png",
         width: 800,
         height: 600,
         alt: "InstaGenius Logo",
@@ -38,15 +38,25 @@ export const metadata = {
     images: ["/icon_1.png"],
   },
   icons: {
-    icon: "https://www.instagenius.xyz/icon_1.png",
+    icon: "/icon_1.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        {/* ✅ Favicon */}
+        <link rel="icon" href="/icon_1.png" type="image/png" />
+
+        {/* ✅ AdSense Script */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8809333825398998"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-         <AdsenseScript /> 
         {children}
       </body>
     </html>
