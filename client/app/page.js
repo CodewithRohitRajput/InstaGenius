@@ -121,6 +121,8 @@ export default function CaptionGenerator() {
         <meta property="og:title" content="InstaGenius - AI Caption Generator" />
         <meta property="og:description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
         <meta property="og:image" content="https://www.instagenius.xyz/icon_1.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://www.instagenius.xyz" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
