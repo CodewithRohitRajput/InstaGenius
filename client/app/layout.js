@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,40 +36,28 @@ export const metadata = {
     description: "Free AI Instagram caption generator",
     images: ["/icon_1.png"],
   },
-icons: {
-  icon: [
-    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    { url: "/favicon.ico", type: "image/x-icon" },
-  ],
-  apple: "/apple-touch-icon.png",
-  shortcut: "/favicon.ico",
-},
-
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-
-        {/* ✅ Favicon */}
-         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {children}
         {/* ✅ AdSense Script */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8809333825398998"
           crossOrigin="anonymous"
         ></script>
-      </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
       </body>
     </html>
   );
