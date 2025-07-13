@@ -24,7 +24,7 @@ export const metadata = {
     images: [
       {
         url: "/icon_1.png",
-        width: 800,
+        width: 600,
         height: 600,
         alt: "InstaGenius Logo",
       },
