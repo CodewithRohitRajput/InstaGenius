@@ -99,7 +99,7 @@ export default function BioGenerator() {
   };
 
   const tones = [
-    { id: 'professional', label: 'Professional', emoji: '💼' },
+    { id: 'pro', label: 'Professional', emoji: '💼' },
     { id: 'casual', label: 'Casual', emoji: '😊' },
     { id: 'creative', label: 'Creative', emoji: '🎨' },
     { id: 'funny', label: 'Funny', emoji: '😂' },
