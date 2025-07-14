@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FiCopy, FiRefreshCw, FiTwitter, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const page = () => {
+const Footer = () => {
   return (
     <div>
        <footer className="py-6 border-t border-amber-600 pt-10 bg-white dark:bg-black">
@@ -63,4 +63,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Footer
