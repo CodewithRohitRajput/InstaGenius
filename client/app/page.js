@@ -226,7 +226,7 @@ smart caption for quotes
           </label>
         </div>
 
-        <main className="flex-grow py-12 px-4  sm:px-6 lg:px-8 md:-mt-20 bg-white dark:bg-black">
+        <main className="flex-grow py-12 px-4 min-h-screen  sm:px-6 lg:px-8 md:-mt-20 bg-white dark:bg-black">
           <div className="max-w-2xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
