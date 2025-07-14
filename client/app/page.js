@@ -8,6 +8,43 @@ import Image from 'next/image';
 import './page.css'
 import Navbar from './components/navbar/page';
 
+export const metadata = {
+  title: "InstaGenius - AI Instagram Caption Generator",
+  description: "Generate creative, catchy, and optimized Instagram captions with InstaGenius.",
+  keywords: [
+    "instagram caption generator",
+    "ai instagram captions",
+    "free instagram captions",
+    "best instagram captions",
+    "instagram reel captions",
+    
+  ],
+  openGraph: {
+    title: "InstaGenius - AI Caption Generator",
+    description: "Generate creative, catchy, and optimized Instagram captions with InstaGenius.",
+    url: "https://www.instagenius.xyz",
+    siteName: "InstaGenius",
+    images: [
+      {
+        url: "https://www.instagenius.xyz/icon_1.png",
+        width: 1200,
+        height: 630,
+        alt: "InstaGenius Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "InstaGenius - AI Caption Generator",
+    description: "Generate creative, catchy, and optimized Instagram captions with InstaGenius.",
+    images: ["https://www.instagenius.xyz/icon_1.png"],
+  },
+  alternates: {
+    canonical: "https://www.instagenius.xyz",
+  },
+}
+
 export default function CaptionGenerator() {
   const [prompt, setPrompt] = useState('');
   const [captions, setCaptions] = useState([]);
@@ -20,7 +57,6 @@ export default function CaptionGenerator() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    document.title = "InstaGenius | AI-Powered Instagram Caption Generator";
     const savedTheme = localStorage.getItem('theme');
 
     if (savedTheme === 'dark') {
@@ -114,79 +150,11 @@ export default function CaptionGenerator() {
     { id: 'sassy', label: 'Sassy', emoji: '💁‍♀️' }
   ];
 
+  
+
   return (
     <>
-       <Head>
-        <title>InstaGenius - AI Instagram Caption Generator</title>
-        <meta name="description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
-        <meta property="og:title" content="InstaGenius - AI Caption Generator" />
-        <meta property="og:description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
-        <meta property="og:image" content="https://www.instagenius.xyz/icon_1.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://www.instagenius.xyz" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="
-instagram caption generator,
-ai instagram captions,
-free instagram captions,
-best instagram captions,
-instagram reel captions,
-caption ideas for instagram,
-ai caption writer,
-free ai caption tool,
-caption generator for reels,
-cool insta captions,
-funny instagram captions,
-aesthetic instagram captions,
-caption maker for instagram,
-generate captions for instagram,
-ai powered captions,
-instagram captions tool,
-free captions for insta,
-best ai caption tool,
-ai reel captions,
-smart captions for instagram,
-top insta captions,
-insta caption ideas,
-short instagram captions,
-long instagram captions,
-engaging insta captions,
-free reel caption generator,
-caption + hashtag generator,
-trendy instagram captions,
-viral captions for reels,
-caption ideas for posts,
-caption with emojis,
-caption for influencer,
-insta caption with ai,
-boost instagram reach,
-caption for travel posts,
-caption for selfie,
-caption for food posts,
-caption for fashion reels,
-caption generator ai,
-free hashtag tool for instagram,
-caption tool for content creators,
-caption for reels and posts,
-free instagram growth tool,
-instagram automation ai,
-insta ai caption helper,
-caption for engagement boost,
-ai text for instagram post,
-caption that gets likes,
-caption that goes viral,
-instagram tools for creators,
-caption for business posts,
-caption generator online,
-caption with attitude,
-instagram reels hashtag generator,
-insta caption generator online,
-smart caption for quotes
-" />
-
-      </Head>
+     
     <Navbar/>
       <div className="flex flex-col min-h-screen bg-white dark:bg-black mt-14 ">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black dark:text-white mt-7 leading-tight">

@@ -8,6 +8,39 @@ import Image from 'next/image';
 import Navbar from '@/app/components/navbar/page';
 import './page.css'
 
+export const metadata = {
+  title: "InstaGenius - AI Instagram Bio Generator",
+  description: "Create perfect Instagram bios with AI. Professional, creative bios optimized for profiles.",
+  keywords: [
+    "instagram bio generator",
+    "ai bio generator",
+    "instagram profile bio",
+    // ... add relevant bio keywords
+  ],
+  openGraph: {
+    title: "InstaGenius - AI Bio Generator",
+    description: "Create perfect Instagram bios with AI. Professional, creative bios optimized for profiles.",
+    url: "https://www.instagenius.xyz/bio",
+    images: [
+      {
+        url: "https://www.instagenius.xyz/icon_1.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "InstaGenius - AI Bio Generator",
+    description: "Create perfect Instagram bios with AI",
+    images: ["https://www.instagenius.xyz/icon_1.png"],
+  },
+  alternates: {
+    canonical: "https://www.instagenius.xyz/bio",
+  },
+}
+
 export default function BioGenerator() {
   const [name, setName] = useState('');
   const [profession, setProfession] = useState('');
@@ -20,7 +53,6 @@ export default function BioGenerator() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    document.title = "InstaGenius | AI-Powered Instagram Bio Generator";
     const savedTheme = localStorage.getItem('theme');
 
     if (savedTheme === 'dark') {
@@ -109,15 +141,7 @@ export default function BioGenerator() {
 
   return (
     <>
-      <Head>
-        <title>InstaGenius | AI-Powered Instagram Bio Generator</title>
-        <meta name="description" content="Generate perfect Instagram bios with AI. Get creative, professional bios optimized for your profile." />
-        <meta name="keywords" content="Instagram bio, AI bio generator, social media bio, profile bio, Instagram profile" />
-        <meta property="og:title" content="InstaGenius - AI-Powered Instagram Bio Generator" />
-        <meta property="og:description" content="Generate professional Instagram bios in seconds using AI" />
-        <meta property="og:type" content="website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+  
 
     <Navbar/>
       <div className="flex flex-col min-h-screen bg-white dark:bg-black mt-14">
