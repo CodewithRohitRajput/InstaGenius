@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "InstaGenius - AI Instagram Caption Generator",
+  title: "InstaGenius - Boost Instagram Profile",
   description: "Free AI-powered Instagram caption generator that helps you create trendy and optimized captions with hashtags.",
   metadataBase: new URL("https://www.instagenius.xyz"),
   openGraph: {
