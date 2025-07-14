@@ -1,6 +1,6 @@
 export default function TermsPage() {
   return (
-    <main className="px-6 py-12 max-w-4xl mx-auto text-black dark:text-white">
+    <main className="px-6 py-12  min-h-screen max-w-4xl mx-auto text-black dark:text-white">
       <h1 className="text-4xl font-bold mb-4">Terms & Conditions</h1>
       <p className="text-lg leading-relaxed mb-4">
         By using InstaGenius, you agree to these terms:
