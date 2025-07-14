@@ -1,4 +1,6 @@
-import CaptionGenerator from './CaptionGenerator'; // We'll create this component
+// import CaptionGenerator from './CaptionGenerator';/ // We'll create this component
+
+import './CaptionGenerator'
 
 export const metadata = {
   title: "AI Instagram Caption Generator - InstaGenius",
