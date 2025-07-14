@@ -5,6 +5,7 @@ const cors = require('cors')
 const bot = require('./gemini/bot')
 const cron = require('node-cron')
 const fetch = require('node-fetch')
+const bio = require('./services/bio-generate')
 
 app.use(cors())
 app.use(express.json())
@@ -13,6 +14,8 @@ methods : ['POST' , 'GET'],
 credentials : 'true'
 }))
 app.use('/' , bot)
+app.use('/', bio)
+
 
 app.listen(port , ()=>{
     console.log("Server is running on port 3000")
