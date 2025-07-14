@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { FiCopy, FiRefreshCw, FiTwitter, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
-import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from '@/app/components/navbar/page';
 import './page.css'
