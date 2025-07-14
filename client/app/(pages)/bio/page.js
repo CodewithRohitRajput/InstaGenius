@@ -5,6 +5,7 @@ import { FiCopy, FiRefreshCw, FiTwitter, FiLinkedin, FiGithub } from 'react-icon
 import { motion, AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
+import Navbar from '@/app/components/navbar/page';
 import './page.css'
 
 export default function BioGenerator() {
@@ -118,6 +119,7 @@ export default function BioGenerator() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+    <Navbar/>
       <div className="flex flex-col min-h-screen bg-white dark:bg-black mt-14">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black dark:text-white mt-7 leading-tight">
           Welcome to <span className="bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold">
@@ -178,7 +180,7 @@ export default function BioGenerator() {
                   <div className='md:ml-10 ml-5'>
                     <h1 className="text-3xl font-bold text-black dark:text-white">
                       <span className="bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold">
-                        InstaGenius
+                       AI Bio Generator
                       </span>
                     </h1>
                     <p className="text-sm text-black dark:text-white">AI-Powered Instagram Bio Generator</p>

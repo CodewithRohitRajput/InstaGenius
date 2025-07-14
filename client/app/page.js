@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
 import './page.css'
+import Navbar from './components/navbar/page';
 
 export default function CaptionGenerator() {
   const [prompt, setPrompt] = useState('');
@@ -186,7 +187,7 @@ smart caption for quotes
 " />
 
       </Head>
-
+    <Navbar/>
       <div className="flex flex-col min-h-screen bg-white dark:bg-black mt-14 ">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-black dark:text-white mt-7 leading-tight">
           Welcome to <span className="bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold">
@@ -247,7 +248,7 @@ smart caption for quotes
                   <div className='md:ml-10 ml-5'>
                     <h1 className="text-3xl font-bold text-black dark:text-white">
                       <span className="bg-gradient-to-r from-orange-700 via-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold">
-                        InstaGenius
+                        AI Caption Generator
                       </span>
                     </h1>
                     <p className="text-sm text-black dark:text-white">AI-Powered Instagram Caption Generator</p>
