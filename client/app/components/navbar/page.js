@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import BioGenerator from '@/app/(pages)/bio/page';
+// import BioGenerator from '@/app/(pages)/bio/page';
+import BioGenerator from '@/app/(pages)/bio/BioClient';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();

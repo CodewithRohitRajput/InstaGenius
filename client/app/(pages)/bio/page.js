@@ -1,4 +1,5 @@
-import BioClient from './BioClient';
+// import BioClient from './BioClient';
+import BioClient from './BioClient'
 
 export function generateMetadata() {
   return {
