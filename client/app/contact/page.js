@@ -6,7 +6,7 @@ export default function ContactPage() {
         Reach out with questions, suggestions, or feedback — we are here to help!
       </p>
       <p className="mt-4 text-lg">
-        📧 Email: <a href="mailto:rohitsinghrajput964@gmail.com" className="text-orange-500">instagenius.support@gmail.com</a>
+        📧 Email: <a href="mailto:rohitsinghrajput964@gmail.com" className="text-orange-500">rohitsinghrajput964@gmail.com</a>
       </p>
     </main>
   );
