@@ -13,8 +13,8 @@ const Navbar = () => {
     // { href: '/', label: 'Home' },
     { href: '/', label: 'Caption Generator' },
     { href: '/bio', label: 'Bio Generator' },
-    { href: '/services', label: 'Services' },
-    { href: '/blog', label: 'Blog' },
+    // { href: '/se', label: 'Services' },
+    // { href: '/blog', label: 'Blog' },
   ];
 
   return (
