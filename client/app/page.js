@@ -118,7 +118,6 @@ export default function CaptionGenerator() {
     <>
        <Head>
         <title>InstaGenius - AI Instagram Caption Generator</title>
-        <link rel="canonical" href="https://www.instagenius.xyz/" />
         <meta name="description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
         <meta property="og:title" content="InstaGenius - AI Caption Generator" />
         <meta property="og:description" content="Generate creative, catchy, and optimized Instagram captions with InstaGenius." />
