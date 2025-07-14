@@ -90,7 +90,7 @@ const NotFound = () => {
           className="text-xl mb-10 text-gray-300"
           variants={itemVariants}
         >
-          The page you're looking for might have been removed, had its name changed, or is temporarily unavailable.
+          The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </motion.p>
 
         {/* Buttons */}
