@@ -15,6 +15,9 @@ export const metadata = {
   title: "InstaGenius - Boost Instagram Profile via AI",
   description: "Free AI-powered Instagram caption generator that helps you create trendy and optimized captions with hashtags.",
   metadataBase: new URL("https://www.instagenius.xyz"),
+  alternates: {
+    canonical: "https://www.instagenius.xyz",
+  },
   openGraph: {
     title: "InstaGenius - AI Caption Generator",
     description: "Generate professional, trendy captions using AI",
